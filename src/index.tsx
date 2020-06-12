@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import { Text, View } from 'react-native';
-import Index from "./src";
-export default class HelloWorldApp extends Component {
+
+export default class Index extends Component {
   render() {
     return (
       <View>
-        <Index />
+        <Text>Hello, world!</Text>
       </View>
     );
   }
 }
-
