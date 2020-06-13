@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import { StyleSheet,Text, View } from 'react-native';
 import Header from "./organisms/header";
+import Nav from "./organisms/nav";
+import Table from "./organisms/table";
+
 export default class Index extends Component {
   render() {
     return (
       <>
         <View style={styles.header}><Header /></View>
-        <View style={styles.table}><Text>heo</Text></View>
-        <View style={styles.buttons}><Text>heo</Text></View>
+        <View style={styles.table}><Table /></View>
+        <View style={styles.nav}><Nav /></View>
       </>
     );
   }
@@ -15,12 +18,13 @@ export default class Index extends Component {
 const styles = StyleSheet.create({
   header: {
     flex:1,
+    backgroundColor:"#ff0000",
   },
   table: {
     flex:8,
-    backgroundColor:"#ff0000",
   },
-  buttons: {
+  nav: {
     flex:2,
+    backgroundColor:"#ff0000",
   },
 });
