@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import { StyleSheet,Text, View } from 'react-native';
 import Header from "./organisms/header";
 import Nav from "./organisms/nav";
-import Table from "./organisms/table";
+import Tables from "./organisms/table";
 
 export default class Index extends Component {
   render() {
     return (
       <>
         <View style={styles.header}><Header /></View>
-        <View style={styles.table}><Table /></View>
+        <View style={styles.table}><Tables /></View>
         <View style={styles.nav}><Nav /></View>
       </>
     );
