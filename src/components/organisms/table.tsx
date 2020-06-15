@@ -19,6 +19,7 @@ export default class Tables extends Component {
     var period = Math.max(mon.length,tue.length,wed.length,thu.length,fri.length,sat.length,sun.length)
     var flex = [1,1,1,1,1,1,1];
     var flex2 = [2,1,1,1,1,1,1];
+    
     for(var i=0;i<period;i++){
       title.push(i+1);
       for(var j=0;j<7;j++){
@@ -28,13 +29,14 @@ export default class Tables extends Component {
       body.push(body2);
       body2 = []
     }
+    var hei = 400/period;
     return (
       <View style={styles.margin}>
           <Table borderStyle={{borderWidth: 1}}>
             <Row data={weekstr} flexArr={flex} style={styles.head} textStyle={styles.text}/>
             <TableWrapper style={styles.wrapper}>
-              <Col data={title} style={styles.title} heightArr={[80,80]} textStyle={styles.text} />
-              <Rows data={body} flexArr={flex} style={styles.row} textStyle={styles.text} />
+              <Col data={title} style={styles.title} heightArr={[hei,hei]} textStyle={styles.text} />
+              <Rows data={body} flexArr={flex} style={ { height: hei  }}textStyle={styles.text} />
             </TableWrapper>
           </Table>
       </View>
@@ -55,6 +57,5 @@ const styles = StyleSheet.create({
   head: {  height: 30,  backgroundColor: '#f1f8ff'  },
   wrapper: { flexDirection: 'row' },
   title: { flex: 1, backgroundColor: '#f6f8fa' },
-  row: {  height: 80  },
   text: { textAlign: 'center' },
 });
